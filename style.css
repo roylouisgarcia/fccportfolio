@@ -1,9 +1,9 @@
 /* Custom properties/variables  */
 :root {
   --main-white: #f0f0f0;
-  --main-red: #be3144;
+  --main-red: #d85802;
   --main-blue: #45567d;
-  --main-gray: #303841;
+  --main-gray: #04090f;
 }
 
 /* Base reset */
@@ -154,7 +154,7 @@ img {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-image: linear-gradient(62deg, #021b35 0%, #95a2c7 100%);
 }
 
 .welcome-section > p {
@@ -162,7 +162,39 @@ img {
   font-weight: 200;
   font-style: italic;
   color: var(--main-red);
+  padding: 20px;
 }
+
+/* Polaroid Gallery Section */
+
+.gallery{
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+figure{
+  width: 200px;
+  margin: 8px 0;
+  border: 1px solid #777;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+figure img{
+  width: 100%;
+}
+
+figure figcaption{
+  text-align: center;
+  color: #000;
+  padding: 8px 4px;
+}
+
 
 /* Projects section */
 
@@ -322,10 +354,38 @@ footer > p {
 footer i {
   vertical-align: middle;
 }
-
+footer a {
+  color: orange;
+}
 @media (max-width: 28.75em) {
   footer {
     flex-direction: column;
     text-align: center;
   }
+
+  .gallery{
+    max-height: 500px;
+  }
+
+  figure{
+    max-width: 100px;
+    max-height: 150px;
+    margin: 8px 0;
+    border: 1px solid #777;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  
+  figure img{
+    width: 100%;
+  }
+  
+  figure figcaption{
+    text-align: center;
+    color: #000;
+    padding: 8px 4px;
+  }
+
+
 }
